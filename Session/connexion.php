@@ -58,7 +58,7 @@ if ($vide==false) {
  
 else { 
       echo "Les variables du formulaire ne sont pas déclarées.<br> Vous devez remplir le formulaire"; 
-     ?> <a href="auth.html">Retour au formulaire</a>	 <?php 
+     ?> <a href="login.php">Retour au formulaire</a>	 <?php 
 }  
 
 ?> 

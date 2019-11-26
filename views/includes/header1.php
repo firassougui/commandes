@@ -1,10 +1,37 @@
-<!DOCTYPE html>
+
+<?PHP
+session_start();
+include_once "../core/CommandeC.php";
+$cc1C=new CommandeC();
+$idd=$_SESSION['id'];
+$listeCC=$cc1C->afficherListCC($idd);
+$info=$cc1C->GetInfo($idd);
+?>
+<!doctype html>
 <html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/solution.png" type="image/png">
+	<title>La Solution Medicale</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="includes/css/style.css">
+	<link rel="stylesheet" href="includes/css/responsive.css">
+		<link rel="stylesheet" href="style/css/style.css">
+	<link rel="stylesheet" href="style/css/style1.css">
 
-
-
+</head>
 <body>
-	<!--================Header Menu Area =================-->
 	<header class="header_area">
 		<div class="top_menu row m0">
 			<div class="container-fluid">
@@ -13,19 +40,22 @@
 				</div>
 				<div class="float-right">
 					<ul class="right_side">
+						<?PHP
+							foreach($info as $row){
+								?>
 						<li>
 							<a href="login.html">
-								Login/Register
+								Bonjour <?PHP echo $row['login'];?> !
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								My Account
+								Role : <?PHP echo $row['role'];}?>
 							</a>
 						</li>
 						<li>
-							<a href="contact.html">
-								Contact Us
+							<a href="../Session/logout.php">
+								Logout
 							</a>
 						</li>
 					</ul>
@@ -33,7 +63,7 @@
 			</div>
 		</div>
 
-		<div class="main_menu">
+<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
@@ -131,3 +161,32 @@
 			</nav>
 		</div>
 	</header>
+
+	<section class="home_banner_area">
+		<div class="overlay"></div>
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content row">
+					<div class="offset-lg-2 col-lg-8">
+						<h3>text
+							<br />text</h3>
+						<p>text</p>
+						<a class="white_bg_btn" href="#">shop</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	
+<br>
+<br>
+<br>
+
+	<section class="clients_logo_area">
+		<div class="lastback">	
+		<div class="container-fluid">
