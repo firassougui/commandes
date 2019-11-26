@@ -1,6 +1,6 @@
 <?PHP
 
-include_once "includes/header1.php";
+include_once "header1.php";
 include_once "../core/CommandeC.php";
 $cc1C=new CommandeC();
 $idd=$_SESSION['id'];
@@ -15,13 +15,13 @@ $info=$cc1C->GetInfo($idd);
 
 			 
 <a script="color:red;" href="passerCommande.php" ><h4>passer une commande</h4></a>
-	<br>
-	<a script="color : red; " href="afficherCommandeTrie.php"><B><STRONG>Trier par Date</STRONG></B></a>
-	<br>
+<br>	
+	
 	<form method="POST" action="afficherCommandeID.php">
 	Rechercher par Réference : 
 	<input type="text" name="id" id="id">
 	<input type="submit" name="recherche" value="Rechercher">
+	<a style="color:red; " href="afficherCommandeTrie.php"><B><STRONG>Trier par Date</STRONG></B></a>
     </form>
 	<div class="container form-containers">
 
@@ -79,6 +79,7 @@ if(isset($_GET["trait"]))
 	}
 }
 ?>
+</div>
 </div>
 </section>
 <?php 

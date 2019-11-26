@@ -1,5 +1,5 @@
 <?PHP
-include_once "includes/header1.php";
+include_once "header1.php";
 include_once "../core/CommandeC.php";
 $cc1C=new CommandeC();
 $idd=$_SESSION['id'];

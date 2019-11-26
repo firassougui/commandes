@@ -1,6 +1,6 @@
 <?PHP
 session_start();
-include_once "includes/header1.php";
+include_once "header1.php";
 include_once "../core/CommandeC.php";
 $cc1C=new CommandeC();
 $idd=$_SESSION['id'];
@@ -53,6 +53,7 @@ if(isset($_GET["trait"]))
 	}
 }
 ?>
+</div>
 </div>
 </section>
 <<?php 
